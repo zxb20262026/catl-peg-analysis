@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宁德时代(300750.SZ) PEG价值投资分析报告 - 2026-05-15</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 1080px; margin: 0 auto; padding: 24px; background: #f0f2f5; color: #1f2937; line-height: 1.6; }
+  .decision-card { background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%); color: white; padding: 32px; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 4px 24px rgba(5, 150, 105, 0.3); }
+  .decision-card .verdict { font-size: 52px; font-weight: 800; margin-bottom: 8px; letter-spacing: 4px; }
+  .decision-card .subtitle { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
+  .badge-row { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .badge { padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; background: rgba(255,255,255,0.25); backdrop-filter: blur(4px); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .grid-item { background: rgba(255,255,255,0.2); padding: 14px; border-radius: 10px; text-align: center; }
+  .grid-item .label { font-size: 12px; opacity: 0.8; margin-bottom: 4px; }
+  .grid-item .value { font-size: 22px; font-weight: 700; }
+  .chart-card { background: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .chart-card h2 { font-size: 18px; margin-bottom: 16px; color: #111827; display: flex; align-items: center; gap: 8px; }
+  .section-title { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; }
+  .metric-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f3f4f6; }
+  .metric-row .key { color: #6b7280; }
+  .metric-row .val { font-weight: 600; }
+  .val-green { color: #059669; }
+  .val-red { color: #dc2626; }
+  .val-amber { color: #d97706; }
+  .risk-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  .risk-card { padding: 16px; border-radius: 10px; border-left: 4px solid; }
+  .risk-card.aggressive { background: #f0fdf4; border-color: #22c55e; }
+  .risk-card.conservative { background: #fef2f2; border-color: #ef4444; }
+  .risk-card.neutral { background: #fefce8; border-color: #eab308; }
+  .risk-card h3 { font-size: 14px; margin-bottom: 8px; }
+  .risk-card p { font-size: 13px; color: #4b5563; line-height: 1.5; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f9fafb; padding: 10px 12px; text-align: left; font-weight: 600; color: #374151; border-bottom: 2px solid #e5e7eb; }
+  td { padding: 10px 12px; border-bottom: 1px solid #f3f4f6; }
+  tr:hover td { background: #f9fafb; }
+  .phase-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .phase-tag.buy { background: #d1fae5; color: #065f46; }
+  .phase-tag.caution { background: #fef3c7; color: #92400e; }
+  .disclaimer { color: #9ca3af; font-size: 12px; padding: 20px 0; border-top: 1px solid #e5e7eb; margin-top: 32px; text-align: center; line-height: 1.8; }
+  .summary-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  .summary-box h3 { color: #065f46; margin-bottom: 10px; font-size: 15px; }
+  .summary-box ul { list-style: none; padding: 0; }
+  .summary-box li { padding: 4px 0; font-size: 14px; color: #374151; }
+  .summary-box li::before { content: "✦ "; color: #059669; }
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .risk-section { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. 决策卡片 -->
+<div class="decision-card">
+  <div class="verdict">🟢 BUY</div>
+  <div class="subtitle">宁德时代(300750.SZ) · 价值投资分析 · 2026年5月15日收盘 · PEG估值法</div>
+  <div class="badge-row">
+    <span class="badge">信心水平：中高</span>
+    <span class="badge">风险等级：中等</span>
+    <span class="badge">投资风格：价值投资</span>
+    <span class="badge">核心指标：PEG≈0.78</span>
+    <span class="badge">当前价：423.69元</span>
+  </div>
+  <div class="grid">
+    <div class="grid-item">
+      <div class="label">建议入场价（均价）</div>
+      <div class="value">约407.5元</div>
+      <div style="font-size:11px;opacity:0.7">420×25%+412×35%+395×40%</div>
+    </div>
+    <div class="grid-item">
+      <div class="label">目标价</div>
+      <div class="value">535元</div>
+      <div style="font-size:11px;opacity:0.7">+31.3%</div>
+    </div>
+    <div class="grid-item">
+      <div class="label">止损价</div>
+      <div class="value">390元</div>
+      <div style="font-size:11px;opacity:0.7">-4.3%</div>
+    </div>
+    <div class="grid-item">
+      <div class="label">建议仓位</div>
+      <div class="value">12%</div>
+      <div style="font-size:11px;opacity:0.7">R/R=7.3:1</div>
+    </div>
+  </div>
+</div>
+
+<!-- 2.5 AH溢价对比图 -->
+<div class="chart-card">
+  <h2>🌏 A股 vs H股 估值对比</h2>
+  <canvas id="ahChart" height="280"></canvas>
+  <p style="font-size:12px;color:#6b7280;margin-top:8px;">数据来源：300750.SZ + 03750.HK · 汇率 1HKD≈0.92CNY · H股已考虑5月14日除息调整</p>
+</div>
+
+<!-- 2. 综合评分雷达图 -->
+<div class="chart-card">
+  <h2>📊 七维综合评分（完善版）</h2>
+  <div style="max-width:500px; margin:0 auto;">
+    <canvas id="radarChart" height="360"></canvas>
+  </div>
+</div>
+
+<!-- 3. 价格走势图 -->
+<div class="chart-card">
+  <h2>📈 近期价格走势 & 关键价位</h2>
+  <canvas id="priceChart" height="280"></canvas>
+</div>
+
+<!-- 4. 多空论点对比 -->
+<div class="chart-card">
+  <h2>⚖️ 多空论点权重对比</h2>
+  <canvas id="bullBearChart" height="320"></canvas>
+</div>
+
+<!-- 5. 风险评估三角 -->
+<div class="chart-card">
+  <h2>📋 三方风险评估对比</h2>
+  <canvas id="riskChart" height="280"></canvas>
+</div>
+
+<!-- 6. 详细分析文本区 -->
+
+<!-- 6a. 核心结论 -->
+<div class="chart-card">
+  <h2>📝 核心结论</h2>
+  <div class="summary-box">
+    <h3>最终决策：BUY — 风险主管最终裁决</h3>
+    <ul>
+      <li>PEG ≈ 0.78 < 1，10年PE分位数约30%，Q1 EPS 4.58元验证增长——估值低估成立</li>
+      <li>采纳中性方技术优化：420×25% + 412×35% + 395×40%，均价≈407.5元</li>
+      <li>采纳激进方估��论据：PEG=0.78的历史性窗口不应因短期噪音错失</li>
+      <li>采纳保守方仓位警示：仓位12%（融资尾险折价），止损390元（避开400-380真空区）</li>
+      <li>R/R = 7.3:1，风险收益比大幅优于原始方案</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 6b. 四维分析摘要 -->
+<div class="chart-card">
+  <h2>🔍 四维分析摘要</h2>
+
+  <div class="section-title">📈 技术面（评分 4.5/10 · 偏空）</div>
+  <div class="metric-row"><span class="key">当前股价（5月15日收盘）</span><span class="val">423.69元（前收盘427→今日-0.8%）</span></div>
+  <div class="metric-row"><span class="key">短期趋势</span><span class="val val-red">弱势下跌（460→423.69，-7.9%）</span></div>
+  <div class="metric-row"><span class="key">日内区间</span><span class="val">421.00 - 431.50</span></div>
+  <div class="metric-row"><span class="key">MA20（估算）</span><span class="val">约440元（股价下方）</span></div>
+  <div class="metric-row"><span class="key">支撑位</span><span class="val">420元 / 400元</span></div>
+  <div class="metric-row"><span class="key">阻力位</span><span class="val">436.76元 / 450元</span></div>
+  <div class="metric-row"><span class="key">技术判断</span><span class="val val-amber">接近420支撑位，等待超跌买入（RSI<30或股价<420）</span></div>
+
+  <div class="section-title" style="margin-top:20px;">📊 基本面（评分 8.5/10 · 优质）</div>
+  <div class="metric-row"><span class="key">2025年净利润</span><span class="val val-green">722亿（+42.28%）</span></div>
+  <div class="metric-row"><span class="key">2026Q1 EPS</span><span class="val val-green">4.58元（Q1营收1,291亿，毛利率24.82%）</span></div>
+  <div class="metric-row"><span class="key">2026年预期净利润</span><span class="val">949亿（+31.5%）</span></div>
+  <div class="metric-row"><span class="key">PE(TTM)</span><span class="val">约24.8倍（行业29.34倍，折价15.5%）</span></div>
+  <div class="metric-row"><span class="key">PEG</span><span class="val val-green">约0.78 < 1（低估，较之前427元下的0.79更优）</span></div>
+  <div class="metric-row"><span class="key">10年PE分位数</span><span class="val val-green">约30%（历史低位）</span></div>
+  <div class="metric-row"><span class="key">ROE</span><span class="val val-green">>24%（连续4年）</span></div>
+  <div class="metric-row"><span class="key">经营现金流</span><span class="val val-green">1,332亿（+37.35%）</span></div>
+  <div class="metric-row"><span class="key">总市值</span><span class="val">约2.0万亿（总股本46.27亿）</span></div>
+  <div class="metric-row"><span class="key">机构一致目标价</span><span class="val">535元</span></div>
+
+  <div class="section-title" style="margin-top:20px;">🌏 AH溢价（A股 vs H股 · 关键估值锚）</div>
+  <div class="metric-row"><span class="key">A股 300750.SZ（5月15日）</span><span class="val">423.69元 | PE≈24.8倍 | PB≈5.4倍</span></div>
+  <div class="metric-row"><span class="key">H股 03750.HK（5月15日估算）</span><span class="val">≈633.5港元（除息后） | PE≈37倍 | PB≈7.4倍</span></div>
+  <div class="metric-row"><span class="key">A股折算港元</span><span class="val">423.69 ÷ 0.92 ≈ 460.5港元</span></div>
+  <div class="metric-row"><span class="key">AH溢价</span><span class="val val-green">460.5/633.5 - 1 = <strong>-27.3%</strong>（A股大幅折价）</span></div>
+  <div class="metric-row"><span class="key">信号解读</span><span class="val val-green">海外给更高估值 → A股被低估。AH倒挂是强买入信号</span></div>
+
+  <div class="section-title" style="margin-top:20px;">⛏️ 碳酸锂价格（成本端监控）</div>
+  <div class="metric-row"><span class="key">电池级碳酸锂（5月11日）</span><span class="val val-amber">197,500元/吨（逼近20万关口）</span></div>
+  <div class="metric-row"><span class="key">年初价格</span><span class="val">≈120,000元/吨</span></div>
+  <div class="metric-row"><span class="key">年内涨幅</span><span class="val val-red">+65%</span></div>
+  <div class="metric-row"><span class="key">对宁德影响</span><span class="val val-amber">成本压力上升，但Q1毛利率24.82%仍改善 → 成本传导能力强</span></div>
+  <div class="metric-row"><span class="key">关键监控阈值</span><span class="val">200,000元/吨突破 → 若持续 > 220,000需警惕毛利承压</span></div>
+
+  <div class="section-title" style="margin-top:20px;">📊 PB分位数（市净率维度）</div>
+  <div class="metric-row"><span class="key">A股 PB</span><span class="val">≈5.41（每股净资产78.28元）</span></div>
+  <div class="metric-row"><span class="key">A股 PB分位数</span><span class="val val-green">≈47%（近5年中位水平，合理不贵）</span></div>
+  <div class="metric-row"><span class="key">H股 PB</span><span class="val val-red">≈7.44（显著高于A股）</span></div>
+  <div class="metric-row"><span class="key">PB-ROE匹配</span><span class="val val-green">ROE>24%，PB 5.4 → PB/ROE=0.22，合理偏低</span></div>
+
+  <div class="section-title" style="margin-top:20px;">📰 新闻面（评分 7.5/10 · 偏多）</div>
+  <div class="metric-row"><span class="key">钠电池商业化</span><span class="val val-green">最大亮点，开辟新增长曲线</span></div>
+  <div class="metric-row"><span class="key">全球市占率</span><span class="val val-green">39.2%，连续九年第一</span></div>
+  <div class="metric-row"><span class="key">31家机构评级</span><span class="val val-green">全线买入/增持</span></div>
+  <div class="metric-row"><span class="key">储能政策</span><span class="val val-green">持续支持</span></div>
+  <div class="metric-row"><span class="key">储能市占率</span><span class="val val-amber">从39%回落至26%（风险信号）</span></div>
+
+  <div class="section-title" style="margin-top:20px;">💹 情绪面（评分 5.5/10 · 中性偏悲观）</div>
+  <div class="metric-row"><span class="key">北向资金（5日）</span><span class="val val-red">净流出40.74亿</span></div>
+  <div class="metric-row"><span class="key">融资余额</span><span class="val val-amber">213.25亿（历史90%分位，杠杆过热）</span></div>
+  <div class="metric-row"><span class="key">控股股东</span><span class="val val-red">拟减持</span></div>
+  <div class="metric-row"><span class="key">机构目标价区间</span><span class="val val-green">550-632元</span></div>
+  <div class="metric-row"><span class="key">价值投资解读</span><span class="val val-green">情绪悲观 = 逆向买入机会</span></div>
+</div>
+
+<!-- 6c. 多空辩论结论 -->
+<div class="chart-card">
+  <h2>🏛️ 多空辩论结论</h2>
+
+  <div class="section-title">🔴 多头核心论点（PEG=0.79 低估，建议买入）</div>
+  <ul style="margin-left:20px;font-size:14px;color:#374151;">
+    <li>PEG=0.79<1，明显低估，10年PE分位数30.15%历史低位</li>
+    <li>基本面质量8.5/10，ROE>24%，盈利质量极高</li>
+    <li>情绪面偏悲观提供逆向买入机会（"别人恐惧时我贪婪"）</li>
+    <li>机构一致看好，目标价535元（+25%）</li>
+    <li>钠电池商业化开辟新增长曲线</li>
+  </ul>
+
+  <div class="section-title" style="margin-top:16px;">🔵 空头核心论点（估值陷阱，建议观望）</div>
+  <ul style="margin-left:20px;font-size:14px;color:#374151;">
+    <li>PEG依赖31.5%增速预期——如果增速20%，PEG=1.25；15%则PEG=1.67>1.5</li>
+    <li>储能市占率从39%断崖式跌至26%，护城河被侵蚀</li>
+    <li>3年PE分位数75.45%，短期估值并不便宜</li>
+    <li>北向资金撤退+控股股东减持=聪明钱在用脚投票</li>
+    <li>融资余额历史90%分位，杠杆过热，下跌风险大</li>
+  </ul>
+
+  <div class="section-title" style="margin-top:16px;">⚖️ 研究主管裁决：<span style="color:#059669;">BUY（分批建仓）</span></div>
+  <div class="summary-box" style="background:#f0fdf4;margin-top:8px;">
+    <h3>裁决理由</h3>
+    <ul>
+      <li>PEG≈0.78的低估判断成立——即使在保守增速假设下（20%），PEG=1.25仍处于合理区间。最新一季报EPS 4.58验证增长质量</li>
+      <li>空头的风险警示被纳入操作方案——分批建仓、等待技术面超跌、不追高</li>
+      <li>价值投资的核心是"价格低于价值时买入"——当前价格423.69元，低于机构目标价535元</li>
+      <li>情绪面信号是短期扰动——长期价值由基本面决定</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 6d. 风险评估结论 -->
+<div class="chart-card">
+  <h2>🛡️ 风险评估结论</h2>
+
+  <div class="risk-section">
+    <div class="risk-card aggressive">
+      <h3>🟢 激进风险视角</h3>
+      <p><strong>评级：强烈买入，仓位提至20-25%</strong><br>
+      PEG=0.78十年一遇，Q1 EPS 4.58元验证增长。目标应取机构区间550-590元而非保守535。15%仓位是"用茶杯接金雨"。北向流出和减持已被市场消化，止损可收紧至388元。</p>
+    </div>
+    <div class="risk-card conservative">
+      <h3>🔴 保守风险视角</h3>
+      <p><strong>评级：等350-380元再入场</strong><br>
+      大股东已减持5800万股套现238亿（均价410.34元），我们不应在413元接盘。融资余额213亿历史99%分位是定时炸弹。380止损在400-380真空区不可靠。350-370是真实成交平台。</p>
+    </div>
+    <div class="risk-card neutral">
+      <h3>🟡 中性风险视角</h3>
+      <p><strong>评级：优化价格档位，仓位维持15%</strong><br>
+      建议420×30%+412×35%+395×35%（均价~409元），替代原方案。406无技术意义，394离止损380太近。前端过重（40%）与预期深跌矛盾。加仓设北向/融资前置条件。</p>
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:16px;">👨‍⚖️ 风险主管裁决：<span style="color:#059669;">BUY — 综合三方优化方案</span></div>
+  <p style="font-size:14px;color:#4b5563;">采纳中性方技术优化（420/412/395替代423/406/394）、激进方估值论据（PEG=0.78不可错过）、保守方仓位警示（12%替代15%，融资尾险折价）。R/R从3.69:1优化至7.3:1。</p>
+</div>
+
+<!-- 6e. 交易方案 -->
+<div class="chart-card">
+  <h2>💰 最终交易方案（FINAL TRANSACTION PROPOSAL）</h2>
+
+  <div class="table-wrap">
+  <table>
+    <tr><th style="width:35%">项目</th><th style="width:65%">内容</th></tr>
+    <tr><td><strong>最终决策</strong></td><td><span class="phase-tag buy">BUY 买入</span>（风险主管最终裁决：420×25%+412×35%+395×40%）</td></tr>
+    <tr><td><strong>第一批</strong></td><td>420元（整数支撑位），25%仓位</td></tr>
+    <tr><td><strong>第二批</strong></td><td>412元（60日均线/前低），35%仓位</td></tr>
+    <tr><td><strong>第三批</strong></td><td>395元（400强支撑下方，金字塔底部），40%仓位</td></tr>
+    <tr><td><strong>平均入场价</strong></td><td>约 407.5元</td></tr>
+    <tr><td><strong>目标价</strong></td><td>535元（基于2026E EPS×18倍PE）</td></tr>
+    <tr><td><strong>止损价</strong></td><td>390元（避开400-380真空区，采纳保守+激进综合建议）</td></tr>
+    <tr><td><strong>预期收益率</strong></td><td>+31.3%（535÷407.5-1）</td></tr>
+    <tr><td><strong>最大亏损</strong></td><td>-4.3%（390÷407.5-1）</td></tr>
+    <tr><td><strong>风险收益比</strong></td><td>≈ 1:7.3</td></tr>
+    <tr><td><strong>持仓周期</strong></td><td>中长期（6-18个月，符合价值投资风格）</td></tr>
+    <tr><td><strong>退出策略</strong></td><td>硬止损390；融资>230亿减仓至8%；大股东再减持清仓</td></tr>
+  </table>
+  </div>
+</div>
+
+<!-- 6f. 关键催化剂与风险 -->
+<div class="chart-card">
+  <h2>⚡ 关键催化剂 & 风险事件</h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div>
+      <div class="section-title" style="color:#059669;">🟢 上行催化剂</div>
+      <ul style="font-size:13px;color:#374151;padding-left:20px;">
+        <li>Q2财报超预期（验证31.5%增速）</li>
+        <li>钠电池量产交付超预期</li>
+        <li>海外大客户订单落地</li>
+        <li>控股股东减持完成（利空出尽）</li>
+        <li>北向资金回流</li>
+        <li>储能市占率止跌回升</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-title" style="color:#dc2626;">🔴 下行风险</div>
+      <ul style="font-size:13px;color:#374151;padding-left:20px;">
+        <li>Q2业绩增速低于20% → PEG恶化</li>
+        <li>储能市占率继续下滑至20%以下</li>
+        <li>控股股东大规模减持</li>
+        <li>北向资金持续流出超50亿</li>
+        <li>新能源政策重大不利变化</li>
+        <li>碳酸锂价格大幅波动</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  ⚠️ <strong>免责声明</strong><br>
+  本报告由 AI 基于公开信息整理生成，仅供学习研究参考，<strong>不构成任何投资建议或个股推荐</strong>。<br>
+  投资有风险，入市需谨慎。过往业绩不代表未来表现。请结合自身情况独立判断，必要时咨询专业投资顾问。<br><br>
+  数据来源：NeoData 金融数据服务 · 分析日期：2026-05-15 · 分析方法：PEG估值法（价值投资）
+</div>
+
+<script>
+// ===== Chart 1: 七维综合评分雷达图（完善版） =====
+new Chart(document.getElementById('radarChart'), {
+  type: 'radar',
+  data: {
+    labels: ['技术面', '基本面', '新闻面', '情绪面', 'AH溢价', '碳酸锂', 'PB分位'],
+    datasets: [{
+      label: '宁德时代评分',
+      data: [4.5, 8.5, 7.5, 5.5, 9.0, 6.0, 7.5],
+      backgroundColor: 'rgba(16, 185, 129, 0.15)',
+      borderColor: '#10b981',
+      borderWidth: 2,
+      pointBackgroundColor: '#059669',
+      pointRadius: 5,
+    }]
+  },
+  options: {
+    scales: { r: { min: 0, max: 10, ticks: { stepSize: 2, backdropColor: 'transparent' } } },
+    plugins: { legend: { display: false } }
+  }
+});
+
+// ===== Chart 2: 价格走势图 =====
+var priceDates = ['5/6','5/7','5/8','5/11','5/12','5/14','5/15'];
+var priceData = [460.00, 451.64, 437.00, 446.11, 431.25, 427.00, 423.69];
+new Chart(document.getElementById('priceChart'), {
+  type: 'line',
+  data: {
+    labels: priceDates,
+    datasets: [
+      { label: '收盘价', data: priceData, borderColor: '#2563eb', backgroundColor: 'rgba(37,99,235,0.1)', fill: true, tension: 0.3, pointRadius: 5, pointBackgroundColor: '#2563eb' },
+      { label: '目标价 535元', data: Array(7).fill(535), borderColor: '#10b981', borderDash: [6,3], borderWidth: 2, pointRadius: 0, fill: false },
+      { label: '止损价 390元', data: Array(7).fill(390), borderColor: '#ef4444', borderDash: [6,3], borderWidth: 2, pointRadius: 0, fill: false },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'bottom' } },
+    scales: { y: { min: 350, max: 560 } }
+  }
+});
+
+// ===== Chart 3: 多空论点权重对比 =====
+new Chart(document.getElementById('bullBearChart'), {
+  type: 'bar',
+  data: {
+    labels: ['PEG低估', '基本面质量', '长期PE分位', '逆向机会', '钠电池亮点', '增速风险', '储能市占', '短期PE分位', '聪明钱撤退', '杠杆过热'],
+    datasets: [
+      { label: '多头权重', data: [9, 9, 8, 7, 7, 0, 0, 0, 0, 0], backgroundColor: '#10b981', borderRadius: 4 },
+      { label: '空头权重', data: [0, 0, 0, 0, 0, 9, 8, 7, 8, 7], backgroundColor: '#ef4444', borderRadius: 4 },
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { position: 'bottom' } },
+    scales: { x: { max: 10, title: { display: true, text: '权重 (1-10)' } } }
+  }
+});
+
+// ===== Chart 4: 三方风险评估 =====
+new Chart(document.getElementById('riskChart'), {
+  type: 'radar',
+  data: {
+    labels: ['上行空间', '下行风险', '安全边际', '时机把握', '仓位建议'],
+    datasets: [
+      { label: '激进', data: [9, 4, 6, 7, 8], borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.1)', borderWidth: 2 },
+      { label: '保守', data: [5, 8, 9, 4, 3], borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.1)', borderWidth: 2 },
+      { label: '中性（采纳）', data: [7, 6, 7, 6, 6], borderColor: '#eab308', backgroundColor: 'rgba(234,179,8,0.1)', borderWidth: 3, pointRadius: 6 },
+    ]
+  },
+  options: {
+    scales: { r: { min: 0, max: 10, ticks: { stepSize: 2 } } },
+    plugins: { legend: { position: 'bottom' } }
+  }
+});
+
+// ===== Chart 5: A股 vs H股估值对比 =====
+new Chart(document.getElementById('ahChart'), {
+  type: 'bar',
+  data: {
+    labels: ['PE(TTM)', 'PB', '折算股价(港元)'],
+    datasets: [
+      { label: 'A股 300750', data: [24.8, 5.4, 460.5], backgroundColor: '#ef4444', borderRadius: 4 },
+      { label: 'H股 03750', data: [37.0, 7.4, 633.5], backgroundColor: '#3b82f6', borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { 
+      legend: { position: 'bottom' },
+      subtitle: { display: true, text: 'AH溢价 -27.3%：A股比H股便宜近三成，价值洼地', font: { size: 13 } }
+    },
+    scales: { 
+      y: { beginAtZero: false, title: { display: true, text: '倍数 / 港元' } } 
+    }
+  }
+});
+</script>
+
+</body>
+</html>
